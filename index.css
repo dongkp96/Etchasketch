@@ -8,7 +8,7 @@ body{
 }
 
 #container{
-    width:800px;
+    width:960px;
     height:auto;
     display:flex;
     flex-wrap:wrap;
@@ -16,14 +16,12 @@ body{
 }
 
 .panel{
-    width: 48px;
-    height:48px;
     background-color: greenyellow;
     flex-grow: 1;
     border: 1px solid black;
 }
 
-#buttons{
+#buttons, #grid{
     margin:10px;
-    
+
 }
