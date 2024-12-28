@@ -1,5 +1,6 @@
 body{
     display:flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -20,4 +21,9 @@ body{
     background-color: greenyellow;
     flex-grow: 1;
     border: 1px solid black;
+}
+
+#buttons{
+    margin:10px;
+    
 }

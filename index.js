@@ -8,3 +8,4 @@ while (i<256){
     container.appendChild(div);
     i++;
 }
+
