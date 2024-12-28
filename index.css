@@ -1,0 +1,23 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#container{
+    width:800px;
+    height:auto;
+    display:flex;
+    flex-wrap:wrap;
+    border: 5px solid black;
+}
+
+.panel{
+    width: 48px;
+    height:48px;
+    background-color: greenyellow;
+    flex-grow: 1;
+    border: 1px solid black;
+}
