@@ -3,6 +3,7 @@ const container = document.querySelector("#container");
 function createGrid(){
     let number = prompt("How large do you want your grid? (Ex: 16x16 then enter 16)")
     let totalPanels = number*number;
+    container.innerHTML ="";
     let i = 0;
     while(i<totalPanels){
         const div = document.createElement("div")
@@ -15,18 +16,16 @@ function createGrid(){
         i++;
     }
 }
-function deleteGrid(){
-    const grid = document.querySelectorAll(".panel");
-    grid.forEach((panel) =>{
-        container.removeChild(panel);  
-    })
-}
 
 const grid = document.querySelector("#grid");
 grid.addEventListener("click", createGrid);
 
 const gridReset = document.querySelector("#grid-reset");
-gridReset.addEventListener("click", deleteGrid);
+gridReset.addEventListener("click", function(){
+    document.querySelectorAll(".panel").forEach((panel) =>{
+        panel.style.background = "greenyellow";
+    })
+})
 
 const btnOn = document.querySelector("#on");
 const btnOff = document.querySelector("#off");
@@ -47,7 +46,7 @@ btnOn.addEventListener("click", function(){
 })
 
 
-btnOff.addEventListener("click", function(e){
+btnOff.addEventListener("click", function(){
     const panels =document.querySelectorAll(".panel")
     panels.forEach((panel) =>{
         if(panel.hasAttribute("data-listener")){
